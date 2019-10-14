@@ -13,6 +13,8 @@
 		1709789C2353500E0028EDAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1709789A2353500E0028EDAC /* Main.storyboard */; };
 		1709789E235350160028EDAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1709789D235350160028EDAC /* Assets.xcassets */; };
 		170978A1235350160028EDAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1709789F235350160028EDAC /* LaunchScreen.storyboard */; };
+		170978A9235350260028EDAC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170978A8235350260028EDAC /* Player.swift */; };
+		C3F10CF6758B96C80F5449C6 /* Pods_OSC_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA39E5FD0735A23C51B84B4 /* Pods_OSC_Player.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		1709789D235350160028EDAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		170978A0235350160028EDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		170978A2235350160028EDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170978A8235350260028EDAC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		4F7B502B49A1BFC59B24FCFD /* Pods-OSC Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSC Player.release.xcconfig"; path = "Target Support Files/Pods-OSC Player/Pods-OSC Player.release.xcconfig"; sourceTree = "<group>"; };
+		5EA39E5FD0735A23C51B84B4 /* Pods_OSC_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSC_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		800A6BAB97C1BB249C839FB2 /* Pods-OSC Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSC Player.debug.xcconfig"; path = "Target Support Files/Pods-OSC Player/Pods-OSC Player.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F10CF6758B96C80F5449C6 /* Pods_OSC_Player.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15B15732BCFACCF5EC26C9E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EA39E5FD0735A23C51B84B4 /* Pods_OSC_Player.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		170978882353500E0028EDAC = {
 			isa = PBXGroup;
 			children = (
 				170978932353500E0028EDAC /* OSC Player */,
 				170978922353500E0028EDAC /* Products */,
+				D6FC4848F5245ED3ABC5FE00 /* Pods */,
+				15B15732BCFACCF5EC26C9E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +76,23 @@
 				170978942353500E0028EDAC /* AppDelegate.swift */,
 				170978962353500E0028EDAC /* SceneDelegate.swift */,
 				170978982353500E0028EDAC /* ViewController.swift */,
+				170978A8235350260028EDAC /* Player.swift */,
 				1709789A2353500E0028EDAC /* Main.storyboard */,
 				1709789D235350160028EDAC /* Assets.xcassets */,
 				1709789F235350160028EDAC /* LaunchScreen.storyboard */,
 				170978A2235350160028EDAC /* Info.plist */,
 			);
 			path = "OSC Player";
+			sourceTree = "<group>";
+		};
+		D6FC4848F5245ED3ABC5FE00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				800A6BAB97C1BB249C839FB2 /* Pods-OSC Player.debug.xcconfig */,
+				4F7B502B49A1BFC59B24FCFD /* Pods-OSC Player.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 170978A5235350160028EDAC /* Build configuration list for PBXNativeTarget "OSC Player" */;
 			buildPhases = (
+				7B6E52D7CEE06EBDA91A7303 /* [CP] Check Pods Manifest.lock */,
 				1709788D2353500E0028EDAC /* Sources */,
 				1709788E2353500E0028EDAC /* Frameworks */,
 				1709788F2353500E0028EDAC /* Resources */,
@@ -133,11 +162,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B6E52D7CEE06EBDA91A7303 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OSC Player-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1709788D2353500E0028EDAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170978A9235350260028EDAC /* Player.swift in Sources */,
 				170978992353500E0028EDAC /* ViewController.swift in Sources */,
 				170978952353500E0028EDAC /* AppDelegate.swift in Sources */,
 				170978972353500E0028EDAC /* SceneDelegate.swift in Sources */,
@@ -282,6 +337,7 @@
 		};
 		170978A6235350160028EDAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 800A6BAB97C1BB249C839FB2 /* Pods-OSC Player.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +356,7 @@
 		};
 		170978A7235350160028EDAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F7B502B49A1BFC59B24FCFD /* Pods-OSC Player.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
